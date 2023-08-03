@@ -51,7 +51,7 @@ type Context interface {
 	// WrapError creates a new error that records the source location from the current context.
 	WrapError(err error) Error
 	// Get bindings
-	GetAll(name string) map[string]interface{}
+	GetAll() map[string]interface{}
 }
 
 type rendererContext struct {
@@ -83,7 +83,7 @@ func (c rendererContext) Get(name string) interface{} {
 }
 
 // Get bindings
-func (c rendererContext) GetAll(name string) map[string]interface{} {
+func (c rendererContext) GetAll() map[string]interface{} {
 	return c.ctx.bindings
 }
 
