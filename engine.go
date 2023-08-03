@@ -3,9 +3,9 @@ package liquid
 import (
 	"io"
 
-	"github.com/osteele/liquid/filters"
-	"github.com/osteele/liquid/render"
-	"github.com/osteele/liquid/tags"
+	"github.com/ohmygod481999/liquid/filters"
+	"github.com/ohmygod481999/liquid/render"
+	"github.com/ohmygod481999/liquid/tags"
 )
 
 // An Engine parses template source into renderable text.
@@ -40,10 +40,9 @@ func (e *Engine) RegisterBlock(name string, td Renderer) {
 //
 // Examples:
 //
-// * https://github.com/osteele/liquid/blob/master/filters/filters.go
+// * https://github.com/ohmygod481999/liquid/blob/master/filters/filters.go
 //
 // * https://github.com/osteele/gojekyll/blob/master/filters/filters.go
-//
 func (e *Engine) RegisterFilter(name string, fn interface{}) {
 	e.cfg.AddFilter(name, fn)
 }

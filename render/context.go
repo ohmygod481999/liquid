@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/osteele/liquid/expressions"
+	"github.com/ohmygod481999/liquid/expressions"
 )
 
 // Context provides the rendering context for a tag renderer.
@@ -78,6 +78,11 @@ func (c rendererContext) EvaluateString(source string) (out interface{}, err err
 // Get gets a variable value within an evaluation context.
 func (c rendererContext) Get(name string) interface{} {
 	return c.ctx.bindings[name]
+}
+
+// Get bindings
+func (c rendererContext) GetAll(name string) map[string]interface{} {
+	return c.ctx.bindings
 }
 
 func (c rendererContext) ExpandTagArg() (string, error) {

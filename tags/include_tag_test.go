@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/osteele/liquid/parser"
-	"github.com/osteele/liquid/render"
+	"github.com/ohmygod481999/liquid/parser"
+	"github.com/ohmygod481999/liquid/render"
 	"github.com/stretchr/testify/require"
 )
 
