@@ -50,6 +50,8 @@ type Context interface {
 	TagName() string
 	// WrapError creates a new error that records the source location from the current context.
 	WrapError(err error) Error
+	// Get bindings
+	GetAll(name string) map[string]interface{}
 }
 
 type rendererContext struct {
